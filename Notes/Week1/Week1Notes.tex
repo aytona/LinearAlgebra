@@ -2,12 +2,16 @@
 \usepackage{amsmath}
 
 \hbadness=99999
-
-\begin{document}
 \title{Linear Algebra: Week 1 Notes and Exercises}
 \author{Christopher Aytona}
-\emph{\textbf{Week 1 Notes and Exercises}}\\
 
+\begin{document}
+
+\begin{center}
+\Huge{Week 1 Notes and Exercises}
+\end{center}
+
+\section{Notes}
 \textbf{Network Flow Diagrams}\\
 $400 + x_2 = x_1$\\
 $400 = x_1 - x_2$\\
@@ -181,7 +185,7 @@ $x_1 = 32 - S$\\
 $x_2 = 16 - 2S$\\
 $x_3 = 0 + S$\\
 
-\textbf{Exercises}\\
+\section{Exercise 1.1}
 Solve each system in Exercise 1-4 by using elementary row operations on the equations or on the augmented matrix. Follow the systematic elimination procedure described in this section.\\
 
 1) $x_1 + 5x_2 = 7$, $-2x_1 - 7x_2 = -5$\\
@@ -204,9 +208,7 @@ $R_2 + 2R_1$\\
 \begin{bmatrix}
 	1 & 5 & | & 7 \\
 	-2+2(1) & -7+2(5) & | & -5+2(7)
-\end{bmatrix}
-\]\\
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1 & 5 & | & 7 \\
 	0 & 3 & | & 9
@@ -217,9 +219,7 @@ $\frac{1}{3}R_2$\\
 \begin{bmatrix}
 	1 & 5 & | & 7 \\
 	\frac{1}{3}(0) & \frac{1}{3(3)} & | & \frac{1}{3}(9)
-\end{bmatrix}
-\]\\
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1 & 5 & | & 7 \\
 	0 & 1 & | & 3
@@ -230,9 +230,7 @@ $R_1 + -5R_2$\\
 \begin{bmatrix}
 	1 + -5(0) & 5 + -5(1) & | & 7 + -5(3) \\
 	0 & 1 & | & 3
-\end{bmatrix}
-\]\\
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1 & 0 & | & -8 \\
 	0 & 1 & | & 3
@@ -260,9 +258,7 @@ $\frac{1}{3}R_1$
 \begin{bmatrix}
 	\frac{1}{3}(1) & \frac{1}{3}(2) &|& \frac{1}{3}(-1)\\
 	5&7&|&10
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&2&|&-1\\
 	5&7&|&10
@@ -273,9 +269,7 @@ $R_2-5R_1$
 \begin{bmatrix}
 	1&2&|&-1\\
 	5-5(1)&7-5(2)&|&10-5(-1)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&2&|&-1\\
 	0&-3&|&15
@@ -286,9 +280,7 @@ $-\frac{1}{3}R_2$
 \begin{bmatrix}
 	1&2&|&-1\\
 	-\frac{1}{3}(0)&-\frac{1}{3}(-3)&|&-\frac{1}{3}(15)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&2&|&-1\\
 	0&1&|&-5
@@ -299,9 +291,7 @@ $R_1-2R_2$
 \begin{bmatrix}
 	1-2(0)&2-2(1)&|&-1-2(-5)\\
 	0&1&|&-5
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&0&|&9\\
 	0&1&|&-5
@@ -323,9 +313,7 @@ $R_2 - R_1$\\
 \begin{bmatrix}
 	1 & 2 & | & 4 \\
 	1-1 & -1-2 & | & 1 - 4
-\end{bmatrix}
-\]\\
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1 & 2 & | & 4\\
 	0 & -3 & | & -3
@@ -336,9 +324,7 @@ $-\frac{1}{3}R_2$\\
 \begin{bmatrix}
 	1 & 2 & | & 4\\
 	-\frac{1}{3}(0) & -\frac{1}{3}(-3) & | & -\frac{1}{3}(-3)
-\end{bmatrix}
-\]\\
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1 & 2 & | & 4 \\
 	0 & 1 & | & 1
@@ -349,9 +335,7 @@ $R_1 - 2R_2$\\
 \begin{bmatrix}
 	1 - 2(0) & 2 - 2(1) & | & 4 - 2(1)\\
 	0 & 1 & | & 1
-\end{bmatrix}
-\]\\
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1 & 0 & | & 2\\
 	0 & 1 & | & 1
@@ -373,9 +357,7 @@ $R_2-3R_1$
 \begin{bmatrix}
 	1&2&|&-13\\
 	3-3(1)&-2-3(2)&|&1-3(-13)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&2&|&-13\\
 	0&-8&|&40
@@ -386,9 +368,7 @@ $-\frac{1}{8}R_2$
 \begin{bmatrix}
 	1&2&|&-13\\
 	-\frac{1}{8}(0)&-\frac{1}{8}(-8)&|&-\frac{1}{8}(40)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&2&|&-13\\
 	0&1&|&-5
@@ -399,9 +379,7 @@ $R_1-2R_2$
 \begin{bmatrix}
 	1-2(0)&2-2(1)&|&-13-2(-5)\\
 	0&1&|&-5
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&0&|&-3\\
 	0&1&|&-5
@@ -423,9 +401,7 @@ $R_2-3R_1$ and $R_3-R_1$
 	2&3&|&-1\\
 	6-3(2)&5-3(3)&|&0-3(-1)\\
 	2-2&-5-3&|&7-(-1)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	2&3&|&-3\\
 	0&-4&|&3\\
@@ -438,9 +414,7 @@ $R_3-2R_2$
 	2&3&|&-3\\
 	0&-4&|&3\\
 	0-2(0)&-8-2(-4)&|&8-2(3)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	2&3&|&-3\\
 	0&-4&|&3\\
@@ -463,9 +437,7 @@ $R_3-R_1$
 	2&4&4&|&4\\
 	0&1&-2&|&-2\\
 	2-2&3-4&0-4&|&0-4
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	2&4&4&|&4\\
 	0&1&-2&|&-2\\
@@ -478,9 +450,7 @@ $R_3+R_2$
 	2&4&4&|&4\\
 	0&1&-2&|&-2\\
 	0+0&-1+1&-4+(-2)&|&-4+(-2)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	2&4&4&|&4\\
 	0&1&-2&|&-2\\
@@ -493,9 +463,7 @@ $\frac{1}{2}R_1$ and $-\frac{1}{6}R_3$
 	\frac{1}{2}(2)&\frac{1}{2}(4)&\frac{1}{2}(4)&|&\frac{1}{2}(4)\\
 	0&1&-2&|&-2\\
 	-\frac{1}{6}(0)&-\frac{1}{6}(0)&-\frac{1}{6}(-6)&|&-\frac{1}{6}(-6)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&2&2&|&2\\
 	0&1&-2&|&-2\\
@@ -517,9 +485,7 @@ $R_2-3R_1$
 \begin{bmatrix}
 	1&h&|&4\\
 	3-3(1)&6-3(h)&|&8-3(4)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&h&4\\
 	0&3h-6&|&-4
@@ -538,9 +504,7 @@ $R_2-2R_1$
 \begin{bmatrix}
 	1&h&|&-5\\
 	2-2(1)&-8-2(h)&|&6-2(-5)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&h&|&-5\\
 	0&-2h-8&|&16
@@ -559,9 +523,7 @@ $R_2-3R_1$
 \begin{bmatrix}
 	1&4&|&-2\\
 	3-3(1)&h-3(4)&|&-6-3(-2)
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	1&4&|&-2\\
 	0&h-12&|&0
@@ -580,9 +542,7 @@ $R_2+\frac{1}{2}R_1$
 \begin{bmatrix}
 	-4&12&|&h\\
 	2+\frac{1}{2}(-4)&-6+\frac{1}{2}(12)&|&-3+\frac{h}{2}
-\end{bmatrix}
-\]
-\[
+\end{bmatrix}=
 \begin{bmatrix}
 	-4&12&|&h\\
 	0&0&|&-3+\frac{h}{2}
@@ -591,6 +551,7 @@ $R_2+\frac{1}{2}R_1$
 The system is only consist if and only if $h=6$.\\
 
 23) \\
+
 a) Every elementary row operation is reversible.\\
 True, scaling and adding or subtracting rows are reversible.\\
 
@@ -602,4 +563,155 @@ False, the solution set consists of all possible solutions as a statement is onl
 
 d) Two fundamental questions about a linear system involve existence and uniqueness.\\
 True, uniqueness implies existence and existence implies uniqueness. Then $A$ is invertible.\\
+
+24) \\
+
+a) Two matrices are row equivalent if they have the same number of rows.\\
+False, row equivalent requires a sequence of row operations that transforms one matrix into another.\\
+
+b) Elementary row operations on an augmented matrix never change the solution set of the associated linear system.\\
+True.\\
+
+c) Two equivalent linear systems can have different solutions sets.\\
+False.\\
+
+d) A consistent system of linear equations has one or more solutions.\\
+True, a consistent system has at least one solution.\\
+
+25) Find an equation involving $g, h,$ and $k$ that makes this augmented matrix correspond to a consistent system:
+\[
+\begin{bmatrix}
+	1&-4&7&|&g\\
+	0&3&-5&|&h\\
+	-2&5&-9&|&k
+\end{bmatrix}
+\]\\
+$R_3+2R_1$
+\[
+\begin{bmatrix}
+	1&-4&7&|&g\\
+	0&3&-5&|&h\\
+	-2+2(1)&5+2(-4)&-9+2(7)&|&k+2g
+\end{bmatrix}=
+\begin{bmatrix}
+	1&-4&7&|&g\\
+	0&3&-5&|&h\\
+	0&-3&5&|&k+2g
+\end{bmatrix}
+\]\\
+$R_3+R_2$
+\[
+\begin{bmatrix}
+	1&-4&7&|&g\\
+	0&3&-5&|&h\\
+	0&-3+3&5+(-5)&|&k+2g+h
+\end{bmatrix}=
+\begin{bmatrix}
+	1&-4&7&|&g\\
+	0&3&-5&|&h\\
+	0&0&0&|&k+2g+h
+\end{bmatrix}
+\]\\
+Therefore, this system is consistent if and only if $k+2g+h = 0$.\\
+
+26) Suppose the system below is consistent for all possible values of $f$ and $g$. What can you say about the coefficients $c$ and $d$? Justify your answer.\\
+$2x_1+4x_2=f$\\
+$cx_1+dx_2=g$\\
+\[
+\begin{bmatrix}
+	2&4&|&f\\
+	c&d&|&g
+\end{bmatrix}
+\]\\
+$\frac{1}{2}R_1$
+\[
+\begin{bmatrix}
+	1&2&|&\frac{f}{2}\\
+	c&d&|&g
+\end{bmatrix}
+\]\\
+$R_2 = R_2-cR_1$
+\[
+\begin{bmatrix}
+	1&2&|&\frac{f}{2}\\
+	c-c(1)&d-c(2)&|&g-c\frac{f}{2}
+\end{bmatrix}=
+\begin{bmatrix}
+	1&2&|&\frac{f}{2}\\
+	0&d-2c&|&g-c\frac{f}{2}
+\end{bmatrix}
+\]\\
+
+In Exercise 29-32, find the elementary row operation that transforms the first matrix into the second, and then find the reverse row operation that transforms the second matrix into the first.\\
+
+29) $R_1$ swap with $R_3$.\\
+\[
+\begin{bmatrix}
+0&-2&|&5\\
+1&3&|&-5\\
+3&-1&|&6
+\end{bmatrix}
+\begin{bmatrix}
+3&-1&|&6\\
+1&3&|&-5\\
+0&-2&|&5
+\end{bmatrix}
+\]\\
+
+
+30)$-\frac{1}{5}R_3$.\\
+\[
+\begin{bmatrix}
+1&3&|&-4\\
+0&-2&|&6\\
+0&-5&|&10
+\end{bmatrix}
+\begin{bmatrix}
+1&3&|&-4\\
+0&-2&|&6\\
+0&1&|&-2
+\end{bmatrix}
+\]\\
+
+\section{Exercise 1.2}
+
+In Exercise 1 and 2, determine which matrices are in reduced echelon form and which others are only in echelon form.\\
+
+1) a) \[
+\begin{bmatrix}
+1&0&0&0\\
+0&1&0&0\\
+0&0&1&1
+\end{bmatrix}
+\]
+Reduced echelon form.\\
+
+b) \[
+\begin{bmatrix}
+1&0&1&0\\
+0&1&1&0\\
+0&0&0&1
+\end{bmatrix}
+\]
+Reduced echelon form.\\
+
+c) \[
+\begin{bmatrix}
+1&0&0&0\\
+0&1&1&0\\
+0&0&0&0\\
+0&0&0&1
+\end{bmatrix}
+\]
+Not echelon form.\\
+
+d) \[
+\begin{bmatrix}
+1&1&0&1&1\\
+0&2&0&2&2\\
+0&0&0&3&3\\
+0&0&0&0&4
+\end{bmatrix}
+\]
+Echelon form.\\
 \end{document}
