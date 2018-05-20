@@ -98,8 +98,8 @@ B=
 \section{Exercise 2.1}
 Questions 1,2,3,7,8,9,10,12\\
 
-In Exercise 1 and 2, compute each matrix sum or product if it is defined. If an expression is undefined, explain why. Let\\
-\[A=
+In Exercise 1 and 2, compute each matrix sum or product if it is defined. If an expression is undefined, explain why. Let
+$A=
 \begin{bmatrix}
 2&0&-1\\
 4&-5&2
@@ -124,12 +124,12 @@ E=
 -5\\
 3
 \end{bmatrix}
-\]\\
+$.\\
 
 \textbf{Sum}\\
 \[A+B =
 \begin{bmatrix}
-2+7&0+(-5)&-1+1)\\
+2+7&0+(-5)&-1+1\\
 4+1&-5+(-4)&2+(-3)
 \end{bmatrix}=
 \begin{bmatrix}
@@ -228,6 +228,284 @@ Rest of matrices can't be added together since they don't have the same dimensio
 \end{bmatrix}
 \]
 Rest of matrices can't have a dot product since they don't have the required dimensions.\\
+
+1) \\
+\[-2A = 2\cdot
+\begin{bmatrix}
+2&0&-1\\
+4&-5&2
+\end{bmatrix}=
+\begin{bmatrix}
+2\cdot2&2\cdot0&2\cdot-1\\
+2\cdot4&2\cdot-5&2\cdot2
+\end{bmatrix}=
+\begin{bmatrix}
+4&0&-2\\
+8&-10&2
+\end{bmatrix}
+\]
+
+\[B - 2A=
+\begin{bmatrix}
+7&-5&1\\
+1&-4&-3
+\end{bmatrix}+
+\begin{bmatrix}
+4&0&-2\\
+8&-10&2
+\end{bmatrix}=
+\begin{bmatrix}
+11&-5&-1\\
+9&-14&-1
+\end{bmatrix}
+\]\\
+$A_{2\times3} \cdot C_{2\times2}$ can't have a dot product because they don't have the proper dimensions.\\
+\[C D=
+\begin{bmatrix}
+1\cdot3+2\cdot5&1\cdot5+2\cdot4\\
+-2\cdot3+1\cdot-1&-2\cdot5+1\cdot4
+\end{bmatrix}=
+\begin{bmatrix}
+13&13\\
+-7&-5
+\end{bmatrix}
+\]\\
+
+2) \\
+
+\[A +2B=
+\begin{bmatrix}
+2&0&-1\\
+4&-5&2
+\end{bmatrix}+2
+\begin{bmatrix}
+7&-5&1\\
+1&-4&-3
+\end{bmatrix}=
+\begin{bmatrix}
+2&0&-1\\
+4&-5&2
+\end{bmatrix}+
+\begin{bmatrix}
+14&-10&2\\
+2&-8&-6
+\end{bmatrix}=
+\begin{bmatrix}
+16&-10&1\\
+6&-13&-4
+\end{bmatrix}
+\]
+
+$3C-E$ can't have a sum because they don't have the same dimensions.\\
+
+\[C \cdot B=
+\begin{bmatrix}
+1\cdot7+2\cdot1&1\cdot-5+2\cdot-4&1\cdot1+2\cdot-3\\
+-2\cdot7+1\cdot1&-2\cdot-5+1\cdot-4&-2\cdot1+1\cdot-3
+\end{bmatrix}=
+\begin{bmatrix}
+9&-13&-5\\
+-13&6&-5
+\end{bmatrix}
+\]
+
+$EB$ can't have a dot product because they don't have the proper dimensions.\\
+
+3) Let $A = \begin{bmatrix}
+4&-1\\
+5&-2
+\end{bmatrix}$. Compute $3I_2 - A$ and $(3I_2)A$.
+
+\[3I_2-A=3\cdot
+\begin{bmatrix}
+1&0\\
+0&1
+\end{bmatrix}-
+\begin{bmatrix}
+4&-1\\
+5&-2
+\end{bmatrix}=
+\begin{bmatrix}
+3&0\\
+0&3
+\end{bmatrix}-
+\begin{bmatrix}
+4&-1\\
+5&-2
+\end{bmatrix}=
+\begin{bmatrix}
+-1&0\\
+-5&5
+\end{bmatrix}
+\]
+
+\[(3I_2)A =
+\begin{bmatrix}
+3&0\\
+0&3
+\end{bmatrix}\cdot
+\begin{bmatrix}
+4&-1\\
+5&-2
+\end{bmatrix}=
+\begin{bmatrix}
+3\cdot4+0\cdot5&3\cdot-1+0\cdot-2\\
+0\cdot4+3\cdot5&0\cdot-1+3\cdot-2
+\end{bmatrix}=
+\begin{bmatrix}
+12&-3\\
+15&-6
+\end{bmatrix}
+\]\\
+
+7) If a matrix $A$ is $5\times3$ and the product $AB$ is $5\times7$, what is the size of $B$?\\
+$A_{5\times3} \cdot B_{x \times y}=AB_{5\times7}$. To be able to multiply $AB$, the column number of $A$ has to be the same as the row number of $B$. Since $AB$ has a size of $5\times3$, the row size came from the row size of $A$ and the column size came from the column size $B$. Therefore, $B_{3\times7}$.\\
+
+8) How many rows does $B$ have if $BC$ is a $3\times4$ matrix?\\
+$B = 3$ rows.\\
+
+9) Let $A = \begin{bmatrix}
+2&5\\
+-3&1
+\end{bmatrix}, B = \begin{bmatrix}
+4&-5\\
+3&k
+\end{bmatrix}$. What value(s) of $k$, if any, will make $AB = BA$?\\
+
+\[A \cdot B=
+\begin{bmatrix}
+2\cdot4+5\cdot3&2\cdot-5+5\cdot k\\
+-3\cdot4+1\cdot3&-3\cdot-5+1\cdot k
+\end{bmatrix}=
+\begin{bmatrix}
+23&5k-10\\
+-9&k+15
+\end{bmatrix}
+\]
+\[B \cdot A=
+\begin{bmatrix}
+4\cdot2+(-5)\cdot-3&4\cdot5+(-5)\cdot1\\
+3\cdot2+k\cdot-3&3\cdot5+k\cdot1
+\end{bmatrix}=
+\begin{bmatrix}
+23&15\\
+-3k+6&k+15
+\end{bmatrix}
+\]
+\[if
+\begin{bmatrix}
+23&5k-10\\
+-9&k+15
+\end{bmatrix}=
+\begin{bmatrix}
+23&15\\
+-3k+6&k+15
+\end{bmatrix}, then
+\begin{bmatrix}
+23&5k-10\\
+-9&k+15
+\end{bmatrix} -
+\begin{bmatrix}
+23&15\\
+-3k+6&k+15
+\end{bmatrix} =
+\begin{bmatrix}
+0&0\\
+0&0
+\end{bmatrix}
+\]
+\[AB - BA =
+\begin{bmatrix}
+23-(23)&5k-10-(15)\\
+-9-(-3k+6)&k+15-(k+15)
+\end{bmatrix}=
+\begin{bmatrix}
+0&5k-25\\
+3k-15&0
+\end{bmatrix}
+\]
+$$5k-25=0, 5k=25, k=5$$
+$$3k-15=0, 3k=15, k=5$$\\
+
+10) Let $A =
+\begin{bmatrix}
+2&-3\\
+-4&6
+\end{bmatrix},
+B = 
+\begin{bmatrix}
+8&4\\
+5&5
+\end{bmatrix},
+C =
+\begin{bmatrix}
+5&-2\\
+3&1
+\end{bmatrix}$. Verify that $AB = AC$ and yet $B \neq C$.\\
+
+The cancellation laws do not hold for matrix multiplication. Such that $$AB=AC$$ $$\frac{A}{A}B = C$$ $$I_AB = C$$ $$B = C$$\\
+\[A \cdot B =
+\begin{bmatrix}
+2\cdot8+(-3)\cdot5&2\cdot4+(-3)\cdot5\\
+-4\cdot8+6\cdot5&-4\cdot4+6\cdot5
+\end{bmatrix} =
+\begin{bmatrix}
+1&-7\\
+-2&14
+\end{bmatrix}
+\]
+
+\[A \cdot C =
+\begin{bmatrix}
+2\cdot5+(-3)\cdot3&2\cdot-2+(-3)\cdot1\\
+-4\cdot5+6\cdot3&-4\cdot-2+6\cdot1
+\end{bmatrix} =
+\begin{bmatrix}
+1&-7\\
+-2&14
+\end{bmatrix}
+\]
+
+\[
+\begin{bmatrix}
+1&-7\\
+-2&14
+\end{bmatrix} =
+\begin{bmatrix}
+1&-7\\
+-2&-2
+\end{bmatrix}
+\]\\
+
+12) Let $A = 
+\begin{bmatrix}
+3&-6\\
+-1&2
+\end{bmatrix}$. Construct a $2\times2$ matrix $B$ such that $AB$ is the zero matrix. Use two different non-zero columns for $B$.\\
+
+Consider $B = \begin{bmatrix}
+b_1&b_2\\
+b_3&b_4
+\end{bmatrix}$, then $Ab_1 = 0$ and $Ab_2 = 0$ or $Ab_3 = 0$ and $Ab_4 = 0$.
+
+\[B = 
+\begin{bmatrix}
+2&2\\
+1&1
+\end{bmatrix}
+\]
+
+\[A \cdot B =
+\begin{bmatrix}
+3\cdot2+(-6)\cdot1&3\cdot2+(-6)\cdot1\\
+-1\cdot2+2\cdot1&-1\cdot2+2\cdot1
+\end{bmatrix} =
+\begin{bmatrix}
+0&0\\
+0&0
+\end{bmatrix}
+\]\\
+
 
 \section{Exercise 2.2}
 Questions 1,2,3,4,5,6,7a,8,29-32\\
