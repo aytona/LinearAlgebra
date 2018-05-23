@@ -1,0 +1,166 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hbadness=99999
+\voffset=-1in
+\oddsidemargin=5pt
+\textwidth=450pt
+\textheight=700pt
+
+\begin{document}
+\title{Linear Algebra: Week 3 Notes and Exercises}
+\author{Christopher Aytona}
+\maketitle
+
+\section{Notes}
+Exercises\\
+
+1) Find the length of the vectors $a = \begin{bmatrix}
+-10\\
+5
+\end{bmatrix}$ and $b = \begin{bmatrix}
+3\\
+3
+\end{bmatrix}$
+
+$||\vec{a}|| = \sqrt{(-10)^2+5^2}$
+
+$||\vec{a}|| = \sqrt{125}$
+
+$||\vec{b}|| = \sqrt{(3)^2+(3)^2}$
+
+$||\vec{b}|| = \sqrt{18}$\\
+
+2) Find the magnitude of the vectors $r = \begin{bmatrix}
+7\\
+-3
+\end{bmatrix}$ and $q = \begin{bmatrix}
+-3\\
+7
+\end{bmatrix}$
+
+$||\vec{r}|| = \sqrt{(7)^2+(-3)^2}$
+
+$||\vec{r}|| = \sqrt{58}$
+
+$||\vec{q}|| = \sqrt{(-3)^2+(7)^2}$
+
+$||\vec{q}|| = \sqrt{58}$\\
+
+3) Normalize the vectors in $\mathbb{R}^2$ $a = \begin{bmatrix}
+4\\
+5
+\end{bmatrix}$ and $b = \begin{bmatrix}
+5\\
+-4
+\end{bmatrix}$
+
+$||\vec{a}|| = \sqrt{(4)^2+(5)^2}$
+
+$||\vec{a}|| = \sqrt{41}$
+
+$\frac{\vec{a}}{||\vec{a}||} = \frac{\begin{bmatrix}
+4&5
+\end{bmatrix}}{\sqrt{41}} = \begin{bmatrix}
+\frac{4}{\sqrt{41}}&\frac{5}{\sqrt{41}}
+\end{bmatrix}$
+
+$||\vec{b}|| = \sqrt{(5)^2+(-4)^2}$
+
+$||\vec{b}|| = \sqrt{41}$
+
+$\frac{\vec{b}}{||\vec{b}||} = \frac{\begin{bmatrix}
+5&-4
+\end{bmatrix}}{\sqrt{41}} = \begin{bmatrix}
+\frac{5}{\sqrt{41}}&\frac{-4}{\sqrt{41}}
+\end{bmatrix}$\\
+
+4) Normalize the vectors in $\mathbb{R}^2$ $q = \begin{bmatrix}
+-3\\
+6
+\end{bmatrix}$ and $p = \begin{bmatrix}
+-1\\
+-1
+\end{bmatrix}$
+
+$||\vec{q}|| = \sqrt{(-3)^2+(6)^2}$
+
+$||\vec{q}|| = \sqrt{41}$
+
+$\frac{\vec{q}}{||\vec{q}||} = \begin{bmatrix}
+\frac{-3}{\sqrt{41}}&\frac{6}{\sqrt{41}}
+\end{bmatrix}$
+
+$||\vec{p}|| = \sqrt{(-1)^2+(-1)^2}$
+
+$||\vec{p}|| = \sqrt{2}$
+
+$\frac{\vec{p}}{||\vec{p}||} = \begin{bmatrix}
+\frac{-1}{\sqrt{2}}&\frac{-1}{\sqrt{2}}
+\end{bmatrix}$
+
+5) Find the distance between the points $a = \begin{bmatrix}
+-10\\
+5
+\end{bmatrix}$ and $b = \begin{bmatrix}
+3\\
+3
+\end{bmatrix}$
+
+$\vec{a}-\vec{b} = \begin{bmatrix}
+-13\\
+2
+\end{bmatrix}$
+
+$||\vec{a}-\vec{b}|| = \sqrt{(-13)^2+(2)^2}$
+
+$||\vec{a}-\vec{b}|| = \sqrt{173}$\\
+
+6) Find the distance between the points $q = \begin{bmatrix}
+-3\\
+7
+\end{bmatrix}$ and $r = \begin{bmatrix}
+7\\
+-3
+\end{bmatrix}$
+
+$\vec{q}-\vec{r} = \begin{bmatrix}
+-10\\
+10
+\end{bmatrix}$
+
+$||\vec{q}-\vec{r}|| = \sqrt{(-10)^2+(10)^2}$
+
+$||\vec{q}-\vec{r}|| = \sqrt{200}$\\
+
+10) Find the dot product of the two vectors. Are the two vectors perpendicular?
+
+a) $$v_1 = \begin{bmatrix}
+-1\\
+-1
+\end{bmatrix} v_2 =
+\begin{bmatrix}
+2\\
+-2
+\end{bmatrix}$$
+
+$v_1 \cdot v_2 = \begin{bmatrix}
+-1\times2+(-1)\times-2
+\end{bmatrix} = \begin{bmatrix}
+0
+\end{bmatrix}$
+
+$||\vec{v_1}|| = \sqrt{(-1)^2+(-1)^2}$
+
+$||\vec{v_1}|| = \sqrt{2}$
+
+$||\vec{v_2}|| = \sqrt{(2)^2+(-2)^2}$
+
+$||\vec{v_2}|| = \sqrt{8}$
+
+$\cos\theta = \frac{\vec{v_1}\cdot\vec{v_2}}{||\vec{v_1}||\cdot||\vec{v_2}||} = \frac{0}{\sqrt{2}\cdot\sqrt{8}} = \frac{0}{\sqrt{16}} = 0$ Therefore, it is perpendicular.//
+
+
+\end{document}
