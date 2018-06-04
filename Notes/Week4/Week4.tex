@@ -1,0 +1,59 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hbadness=99999
+\voffset=-1in
+\oddsidemargin=5pt
+\textwidth=450pt
+\textheight=700pt
+
+\begin{document}
+\title{Linear Algebra: Week 4 Notes and Exercises}
+\author{Christopher Aytona}
+\maketitle
+
+\section{Notes}
+Notes\\
+
+Vector Space\\
+1) $\vec{0} \in V$\\
+2) $\vec{u}, \vec{v} \in V$ then must have $\vec{u} + \vec{v} \in V$\\
+3) $c \in \mathbb{R}, \vec{u} \in V$ then must have $c \vec{u} \in V$\\
+Exercise\\
+
+2) a) True because scaling $\vec{u}$ with either a positive or negative value will still be in $W$.\\
+$\vec{u} = \begin{bmatrix}
+x_1\\
+y_1
+\end{bmatrix}, x_1 \geq 0, y_1 \geq 0$\\
+$c \begin{bmatrix}
+x_1\\
+y_1
+\end{bmatrix} = \begin{bmatrix}
+cx_1\\
+cy_1
+\end{bmatrix}$\\
+$c \geq 0 \Rightarrow cx_1 \geq 0 \Rightarrow cy_1 \geq 0$\\
+$c \leq 0 \Rightarrow cx_1 \leq 0 \Rightarrow cy_1 \leq 0$\\
+b)Let $\vec{u} = \begin{bmatrix}
+4\\
+2
+\end{bmatrix}$, $\vec{v} = \begin{bmatrix}
+-1\\
+-8
+\end{bmatrix}$ $\therefore \vec{u} + \vec{v} = \begin{bmatrix}
+3\\
+-6
+\end{bmatrix}$ which is not in any of the quadrants associated with $W \therefore W$ is not a vector space .\\
+
+6) $p(t) = a + t^2$\\
+$V = \begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix} \in \mathbb{R}^3 | x_1 \in \mathbb{R}, x_2 = 0, x_3 = 1$\\
+$\begin{bmatrix}
+a&0&1
+\end{bmatrix}$
+Its not a vector space because scaling or adding vectors will change the $x_3$.
+\end{document}
