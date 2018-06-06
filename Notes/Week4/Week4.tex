@@ -65,7 +65,7 @@ x\\
 y
 \end{bmatrix} : x \geq 0, y \geq 0 \} $\\
 a) If $u$ and $v$ are in $V$, is $u+v$ in $V$? Why?\\
-If $\vec{u}, \vec{v} \in V is \vec{u} + \vec{v} \in V$\\
+If $\vec{u}, \vec{v} \in V$ is $\vec{u} + \vec{v} \in V$\\
 $\vec{u} \in V \Rightarrow \vec{u} = \begin{bmatrix}
 x_1\\
 y_1
@@ -193,4 +193,95 @@ $\forall c \in \mathbb{R}$ $c \vec{u} = \begin{bmatrix}
 3(ct)
 \end{bmatrix} \in H$\\
 $\therefore H$ is a subspace.\\
+
+Which of the following sets are linearly independent?\\
+Which form a basis for $\mathbb{R}^3$\\
+$\begin{bmatrix}
+1\\
+0\\
+0
+\end{bmatrix}$, $\begin{bmatrix}
+2\\
+3\\
+0
+\end{bmatrix}$
+$\begin{bmatrix}
+1&2&|&0\\
+0&3&|&0\\
+0&0&|&0
+\end{bmatrix}$
+$\frac{1}{2}R_2 = \begin{bmatrix}
+1&2&|&0\\
+0&1&|&0\\
+0&0&|&0
+\end{bmatrix}$
+$R_1 - R_2 = \begin{bmatrix}
+1&0&|&0\\
+0&1&|&0\\
+0&0&|&0
+\end{bmatrix}$\\
+$t$ has no free parameter.\\
+$\therefore$ are linearly independent.\\
+$\begin{bmatrix}
+1\\
+0\\
+0
+\end{bmatrix}$, $\begin{bmatrix}
+2\\
+3\\
+0
+\end{bmatrix}$, $\begin{bmatrix}
+4\\
+5\\
+6
+\end{bmatrix}$\\
+$\begin{bmatrix}
+1&2&4&|&0\\
+0&3&5&|&0\\
+0&0&6&|&0
+\end{bmatrix}$
+$\frac{1}{6}R_3 = \begin{bmatrix}
+1&2&4&|&0\\
+0&3&5&|&0\\
+0&0&1&|&0
+\end{bmatrix}$
+$R_1 - 4R_3 = \begin{bmatrix}
+1&2&0&|&0\\
+0&3&5&|&0\\
+0&0&1&|&0
+\end{bmatrix}$
+$R_2 - 5R_3 = \begin{bmatrix}
+1&2&0&|&0\\
+0&3&0&|&0\\
+0&0&1&|&0
+\end{bmatrix}$
+$\frac{1}{3}R_2 = \begin{bmatrix}
+1&2&0&|&0\\
+0&1&0&|&0\\
+0&0&1&|&0
+\end{bmatrix}$
+$R_1 - 2R_2 = \begin{bmatrix}
+1&0&0&|&0\\
+0&1&0&|&0\\
+0&0&1&|&0
+\end{bmatrix}$\\
+$t$ has no free parameter, $\therefore$ are linearly independent.\\
+$\begin{bmatrix}
+1\\
+0\\
+0
+\end{bmatrix}$, $\begin{bmatrix}
+2\\
+3\\
+0
+\end{bmatrix}$, $\begin{bmatrix}
+4\\
+5\\
+6
+\end{bmatrix}$, $\begin{bmatrix}
+7\\
+8\\
+9
+\end{bmatrix}$\\
+4 Vectors in $\mathbb{R}^3$ must have at least 1 free parameter. $\therefore$ linearly dependent.\\
 \end{document}
