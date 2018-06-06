@@ -55,5 +55,142 @@ x_1&x_2&x_3
 $\begin{bmatrix}
 a&0&1
 \end{bmatrix}$
-Its not a vector space because scaling or adding vectors will change the $x_3$.
+Its not a vector space because scaling or adding vectors will change the $x_3$.\\
+
+\section{Exercises}
+
+1. Let $V$ be the first quadrant in the $xy$-plane; that is let $V = \{
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix} : x \geq 0, y \geq 0 \} $\\
+a) If $u$ and $v$ are in $V$, is $u+v$ in $V$? Why?\\
+If $\vec{u}, \vec{v} \in V is \vec{u} + \vec{v} \in V$\\
+$\vec{u} \in V \Rightarrow \vec{u} = \begin{bmatrix}
+x_1\\
+y_1
+\end{bmatrix}, x_1 \geq 0, y_1 \geq 0$\\
+$\vec{v} \in V \Rightarrow \vec{v} = \begin{bmatrix}
+x_2\\
+y_2
+\end{bmatrix}, x_2 \geq 0, y_2 \geq 0$\\
+$\vec{u} + \vec{v} = \begin{bmatrix}
+x_1\\
+y_1
+\end{bmatrix} + \begin{bmatrix}
+x_2\\
+y_2
+\end{bmatrix} = \begin{bmatrix}
+x_1 + x_2\\
+y_1 + y_2
+\end{bmatrix} = x_1 + x_2 \geq 0, y_1 + y_2 \geq 0$\\
+$\Rightarrow \vec{u} + \vec{v} \in V$\\
+b) Find a specific vector $u$ in $V$ and a specific scalar $c$ such that $cu$ is not in $V$. (This is enough to show that $V$ is not a vector space.)\\
+Let $\vec{u} = \begin{bmatrix}
+1\\
+1
+\end{bmatrix}$ then $\vec{u} \in V$,\\
+Let $c = -1$ then $c\vec{u} = -1\begin{bmatrix}
+1\\
+1
+\end{bmatrix} = \begin{bmatrix}
+-1\\
+-1
+\end{bmatrix} \notin V$\\
+2. Let $W$ be the union of the first and third quadrants in the $xy$-plane. That is, let $W = \{\begin{bmatrix}
+x\\
+y
+\end{bmatrix} : xy \geq 0 \}$\\
+a) If $u$ is in $W$ and $c$ is any scalar, is $cu$ in W? Why?\\
+If $\vec{u} \in W, c \in \mathbb{R}$, is $c\vec{u} \ in W$\\
+Let $\vec{u} = \begin{bmatrix}
+x_1\\
+y_1
+\end{bmatrix}, x_1y_1 \geq 0$, Let $c \in \mathbb{R}$\\
+$cu = c\begin{bmatrix}
+x_1\\
+y_1
+\end{bmatrix} = \begin{bmatrix}
+cx_1\\
+cy_1
+\end{bmatrix}$\\
+$(cx_1)(cy_1) = c^2x_1y_1$\\
+But $c^2 \geq 0, \forall c \in \mathbb{R}$\\
+$c^2x_1y_1 \geq 0 \Rightarrow c\vec{u}\in W$\\
+b) Find specific vectors $u$ and $v$ in $W$ such that $u + v$ is not in $W$. This is enough to show that $W$ is not a vector space.\\
+Let $\vec{u} = \begin{bmatrix}
+1\\
+2
+\end{bmatrix}$, let $\vec{v} = \begin{bmatrix}
+-2\\
+-1
+\end{bmatrix}$\\
+Then $\vec{u} + \vec{v} = \begin{bmatrix}
+1-2\\
+2-1
+\end{bmatrix} = \begin{bmatrix}
+-1\\
+1
+\end{bmatrix} \notin W, since (-1)(1) = -1$\\
+
+In Exercise 5-8, determine if the given set is a subspace of $\mathbb{P}_n$ for an appropriate value of $n$. Justify your answers.\\
+All polynomials $p(t) = at^2$, $a \in \mathbb{R}$\\
+5. All polynomials of the form $p(t) = at^2$, where $a$ is in $\mathbb{R}$\\
+If $a = 0, p(t) = 0t^2 = \vec{0}$ $\therefore \vec{0} \in \{p(t)\}$\\
+If $u(t) = a_1t^2$, $v(t) = a_2t^2$, then $\vec{u} + \vec{v} = a_1t^2+a_2t^2 = (a_1+a_2)t^2 \in \{ p(t) \}$\\
+If $u(t) = a_1t^2$ and $c \in \mathbb{R}$, $c\vec{u} = ca_1t^2 = (ca_1)t^2 \in \{p(t)\}$\\
+$\therefore \{p(t)\}$ is a subspace\\
+6. All polynomials of the form $p(t) = a + t^2$, where $a$ is in $\mathbb{R}$\\
+$\vec{0} = 0+0t+t^2$ is not in $\{p(t)\}$\\
+If $n(t) = a_1 + t^2$, $c = 0$\\
+$c\vec{u} = 0(a_1 + t^2) = 0 \notin \{p(t)\}$\\
+$\therefore$ not in subspace\\
+7. All polynomials of degree at most 3, with integers of coefficients.\\
+If the scalars are any number in $\mathbb{R}$ then $c = \frac{1}{10}$, $p(t) = 1+x+x^2 \Rightarrow cp(t) = \frac{1}{10} + \frac{1}{10}x + \frac{1}{10}x^2 \notin$ the set.\\
+But if we restrict scalars to the set of integers then it will be a subspace.\\
+8. All polynomials in $\mathbb{P}_n$ such that $p(0) = 0$.\\
+$\vec{0} = 0+0t+0t^2 \cdots , \vec{0} = 0$\\
+For $u(t) = a_0 +a_1t+ \cdots , u(0) = 0$\\
+$v(t) = b_0 + b_1t+ \cdots, v(0) = 0$\\
+$u(t) + v(t) = a_0+b_0 + (a_1+b_1)t + \cdots , (u + v) = 0$\\
+if $u(0) = 0$, $c \in \mathbb{R}$ then $cu(0) = c(0) = 0$\\
+$\therefore$ is a subspace.\\
+9. Let $H$ be the set of all vectors of the form $\begin{bmatrix}
+-2t\\
+5t\\
+3t
+\end{bmatrix}$. Find a vector $v$ in $\mathbb{R}^3$ such that $H = Span\{v\}$. Why does this show that $H$ is a subspace of $\mathbb{R}^3$?\\
+$\vec{v} = t\begin{bmatrix}
+-2\\
+5\\
+3
+\end{bmatrix}$\\
+$t = 0 \Rightarrow \begin{bmatrix}
+-2(0)\\
+5(0)\\
+3(0)
+\end{bmatrix} = \begin{bmatrix}
+0\\
+0\\
+0
+\end{bmatrix} \in H$, so $\vec{0} \in H$\\
+$\vec{u} = \begin{bmatrix}
+-2t_1\\
+5t_1\\
+3t_1
+\end{bmatrix}$, $\vec{v} = \begin{bmatrix}
+-2t_2\\
+5t_2\\
+3t_2
+\end{bmatrix} \Rightarrow \vec{u} + \vec{v} = \begin{bmatrix}
+-2(t_1+t_2)\\
+5(t_1+t_2\\
+3(t_1+t_2)
+\end{bmatrix} \in H$\\
+$\forall c \in \mathbb{R}$ $c \vec{u} = \begin{bmatrix}
+-2(ct)\\
+5(ct)\\
+3(ct)
+\end{bmatrix} \in H$\\
+$\therefore H$ is a subspace.\\
 \end{document}
