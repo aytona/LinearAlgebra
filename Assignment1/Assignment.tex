@@ -17,6 +17,8 @@
 	}
 }
 
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
 \begin{document}
 \title{Linear Algebra: Assignment 1 Mock Midterm}
 \author{Christopher Aytona}
@@ -98,9 +100,9 @@ $R_2+\frac{1}{2}R_1 = \begin{bmatrix}
 -4&12&|&h\\
 0&0&|&h-3
 \end{bmatrix}$\\
-$\therefore$ the augmented matrix is consistent if and only if $h=3$, otherwise it's consistent.\\
+$\therefore$ the augmented matrix is consistent if and only if $h=3$, otherwise it's inconsistent.\\
 
-4. (4 marks) Circle either true or false for each statement.\\
+\newpage 4. (4 marks) Circle either true or false for each statement.\\
 a) True\circled{False} In order for a matrix $B$ to be the inverse of $A$, only one of the equations $AB=I$ and $BA=I$ must be true.\\
 b)\circled{True} False If $A$ and $B$ are $n \times n$ and invertible then $B^{-1}A^{-1}$ is the inverse of $AB$.\\
 c) True\circled{False} If $A = \begin{bmatrix}
@@ -130,7 +132,8 @@ c&d
 $\implies \frac{1}{14}\begin{bmatrix}
 3&4\\
 -2&2
-\end{bmatrix} \therefore A^{-1} = \begin{bmatrix}
+\end{bmatrix}$\\
+$\therefore A^{-1} = \begin{bmatrix}
 \frac{3}{14}&\frac{2}{7}\\
 -\frac{1}{7}&\frac{1}{7}
 \end{bmatrix}$\\
@@ -148,50 +151,54 @@ c) $C = \begin{bmatrix}
 1&0&3\\
 1&1&2
 \end{bmatrix}$\\
-$C^{-1} = \begin{bmatrix}
+$$C^{-1} = \begin{bmatrix}
 0&1&0&|&1&0&0\\
 1&0&3&|&0&1&0\\
 1&1&2&|&0&0&1
-\end{bmatrix}$ $R_1 \leftrightarrow R_2 = \begin{bmatrix}
+\end{bmatrix}$$
+$R_1 \leftrightarrow R_2 = \begin{bmatrix}
 1&0&3&|&0&1&0\\
 0&1&0&|&1&0&0\\
 1&1&2&|&0&0&1
-\end{bmatrix}$\\
-$R_1 \leftrightarrow R_3 = \begin{bmatrix}
+\end{bmatrix} \tab[1.5cm]
+R_1 \leftrightarrow R_3 = \begin{bmatrix}
 1&1&2&|&0&0&1\\
 0&1&0&|&1&0&0\\
 1&0&3&|&0&1&0
-\end{bmatrix}$ $R_3 - R_1 = \begin{bmatrix}
+\end{bmatrix}$\\
+$R_3 - R_1 = \begin{bmatrix}
 1&1&2&|&0&0&1\\
 0&1&0&|&1&0&0\\
 0&-1&1&|&0&1&-1
-\end{bmatrix}$\\
-$R_3 + R_2 = \begin{bmatrix}
+\end{bmatrix} \tab
+R_3 + R_2 = \begin{bmatrix}
 1&1&2&|&0&0&1\\
 0&1&0&|&1&0&0\\
 0&0&1&|&1&1&-1
-\end{bmatrix}$ $R_1 - R_2 = \begin{bmatrix}
+\end{bmatrix}$\\
+$R_1 - R_2 = \begin{bmatrix}
 1&0&2&|&-1&0&1\\
 0&1&0&|&1&0&0\\
 0&0&1&|&1&1&-1
-\end{bmatrix}$\\
-$R_1 - 2R_3 = \begin{bmatrix}
+\end{bmatrix} \tab
+R_1 - 2R_3 = \begin{bmatrix}
 1&0&0&|&-3&-2&3\\
 0&1&0&|&1&0&0\\
 0&0&1&|&1&1&-1
-\end{bmatrix}$ $\therefore C^{-1} = \begin{bmatrix}
+\end{bmatrix}$\\
+$$\therefore C^{-1} = \begin{bmatrix}
 -3&-2&3\\
 1&0&0\\
 1&1&-1
-\end{bmatrix}$\\
+\end{bmatrix}$$\\
 
-6. (5 marks) If $A = \begin{bmatrix}
+\newpage 6. (5 marks) If $A = \begin{bmatrix}
 1&-1&3\\
 -2&0&-5\\
 -3&1&4
 \end{bmatrix}$ compute each of the following matrices or explain why it doesn't exist.\\
 a) $A^T + I_3$\\
-$\begin{bmatrix}
+$\implies\begin{bmatrix}
 1&-2&-3\\
 -1&0&1\\
 3&-5&4
@@ -205,7 +212,7 @@ $\begin{bmatrix}
 3&-5&7
 \end{bmatrix}$\\
 b) $4I_3 - 2A$\\
-$4\begin{bmatrix}
+$\implies 4\begin{bmatrix}
 1&0&0\\
 0&1&0\\
 0&0&1
@@ -227,7 +234,7 @@ $4\begin{bmatrix}
 6&-2&-4
 \end{bmatrix}$\\
 c) $(5I_3)(2A)$\\
-$5\begin{bmatrix}
+$\implies 5\begin{bmatrix}
 1&0&0\\
 0&1&0\\
 0&0&0
@@ -258,7 +265,9 @@ $=\begin{bmatrix}
 2&-2&3
 \end{bmatrix}$\\
 $||\vec{v}|| = \sqrt{2^2+(-2)^2+3^2} = \sqrt{17}$\\
-$\frac{\vec{v}}{||\vec{v}||} = \begin{bmatrix}
+$\frac{\vec{v}}{||\vec{v}||} = \frac{\begin{bmatrix}
+2&-2&3
+\end{bmatrix}}{\sqrt{17}} =  \begin{bmatrix}
 \frac{2}{\sqrt{17}}&-\frac{2}{\sqrt{17}}&\frac{3}{\sqrt{17}}
 \end{bmatrix}$\\
 
@@ -269,8 +278,8 @@ $\frac{\vec{v}}{||\vec{v}||} = \begin{bmatrix}
 \end{bmatrix}$\\
 $\vec{v}-\vec{w} = \begin{bmatrix}
 1&-2&2
-\end{bmatrix}$\\
-$||\vec{u}|| = \sqrt{1^2+(-2)^2+2^2} = \sqrt{9} = 3$
+\end{bmatrix} = \vec{u}$\\
+$||\vec{u}|| = \sqrt{1^2+(-2)^2+2^2} = \sqrt{9} = 3$\\
 
 9. (3 marks) Calculate the dot product of the following matrices $\vec{v} = \begin{bmatrix}
 2&-4&4
@@ -302,7 +311,7 @@ $\cos\theta = \frac{\begin{bmatrix}
 \end{bmatrix}}{\sqrt{3^2+(-2)^2+1^2}\cdot\sqrt{1^2+3^2+(-2)^2}} = \frac{-5}{\sqrt{14}\cdot\sqrt{14}} = -\frac{5}{14}$\\
 $\therefore$ the angle between vectors is obtuse since $-1 < \cos\theta < 0$\\
 
-11. (6 marks) Consider each set of vectors in $\mathbb{R}^3$. Show why each set is NOT a vector space. Hint: Find one example that shows that at least one of the vector space properties does not hold.\\
+\newpage 11. (6 marks) Consider each set of vectors in $\mathbb{R}^3$. Show why each set is NOT a vector space. Hint: Find one example that shows that at least one of the vector space properties does not hold.\\
 a) $\{\begin{bmatrix}
 x&y&z
 \end{bmatrix} | y = 2k$, where $k$ can be any integer $\}$\\
@@ -366,11 +375,13 @@ $$\begin{bmatrix}
 2&1&-1&|&0\\
 1&0&1&|&0\\
 3&0&0&|&0
-\end{bmatrix}$$\\$\frac{1}{3}R_3 \leftrightarrow R_1 = \begin{bmatrix}
+\end{bmatrix}$$\\
+$\frac{1}{3}R_3 \leftrightarrow R_1 = \begin{bmatrix}
 1&0&0&|&0\\
 1&0&1&|&0\\
 2&1&-1&|&0
-\end{bmatrix}$ $R_2 \leftrightarrow R_3 = \begin{bmatrix}
+\end{bmatrix} \tab[.15cm]
+R_2 \leftrightarrow R_3 = \begin{bmatrix}
 1&0&0&|&0\\
 2&1&-1&|&0\\
 1&0&1&|&0
@@ -379,11 +390,13 @@ $R_3 - R_1 = \begin{bmatrix}
 1&0&0&|&0\\
 2&1&-1&|&0\\
 0&0&1&|&0
-\end{bmatrix}$ $R_2 - 2R_1 = \begin{bmatrix}
+\end{bmatrix}\tab[.5cm]
+R_2 - 2R_1 = \begin{bmatrix}
 1&0&0&|&0\\
 0&1&-1&|&0\\
 0&0&1&|&0
-\end{bmatrix}$ $R_2 + R_3 = \begin{bmatrix}
+\end{bmatrix}
+R_2 + R_3 = \begin{bmatrix}
 1&0&0&|&0\\
 0&1&0&|&0\\
 0&0&1&|&0
