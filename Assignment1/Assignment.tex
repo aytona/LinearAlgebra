@@ -1,0 +1,424 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+\hbadness=99999
+\voffset=-1in
+\oddsidemargin=5pt
+\textwidth=450pt
+\textheight=700pt
+
+\newcommand*\circled[1]{
+	\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};
+	}
+}
+
+\begin{document}
+\title{Linear Algebra: Assignment 1 Mock Midterm}
+\author{Christopher Aytona}
+\maketitle
+
+1. (4 marks) Circle either true or false for each statements.\\
+a)\circled{True} False The reduced row echelon form of a matrix is unique.\\
+b) True\circled{False} The reduced row echelon form of a matrix  applies only to augmented matrices.\\
+c) True\circled{False} Whenever a system of linear equations has free variables, the solution set contains many solutions.\\
+d) True\circled{False} A 5 $\times$ 6 matrix has 6 rows.\\
+
+2. (5 marks) Do the following lines intersect in a line, a point, or not at all? Describe the solution.\\
+$$3x - y + 2z = 4$$
+$$4x + y - 2z = 3$$
+$$6x - y - z = 1$$
+\[
+\begin{bmatrix}
+3&-1&2&|&4\\
+4&1&-2&|&3\\
+6&-1&-1&|&1
+\end{bmatrix}
+\]\\
+$R_3-2R_1 = \begin{bmatrix}
+3&-1&2&|&4\\
+4&1&-2&|&3\\
+0&1&-5&|&-7
+\end{bmatrix}$ $R_2+R_1 = \begin{bmatrix}
+3&-1&2&|&4\\
+7&0&0&|&7\\
+0&1&-5&|&-7
+\end{bmatrix}$ $\frac{1}{7}R_2 = \begin{bmatrix}
+3&-1&2&|&4\\
+1&0&0&|&1\\
+0&1&-5&|&-7
+\end{bmatrix}$\\
+$R_1\leftrightarrow R_2 \begin{bmatrix}
+1&0&0&|&1\\
+3&-1&2&|&4\\
+0&1&-5&|&-7
+\end{bmatrix}$ $R_2 - 3R_1 = \begin{bmatrix}
+1&0&0&|&1\\
+0&-1&2&|&1\\
+0&1&-5&|&-7
+\end{bmatrix}$ $R_3 + R_2 = \begin{bmatrix}
+1&0&0&|&1\\
+0&-1&2&|&1\\
+0&0&-3&|&-6
+\end{bmatrix}$\\
+$-\frac{1}{3}R_3 = \begin{bmatrix}
+1&0&0&|&1\\
+0&-1&2&|&1\\
+0&0&1&|&2
+\end{bmatrix}$ $R_2 - 2R_3 = \begin{bmatrix}
+1&0&0&|&1\\
+0&-1&0&|&-3\\
+0&0&1&|&2
+\end{bmatrix}$ $-R_2 = \begin{bmatrix}
+1&0&0&|&1\\
+0&1&0&|&3\\
+0&0&1&|&2
+\end{bmatrix}$\\
+$\therefore$ the lines intersect at $(x,y,z) = (1,3,2)$\\
+
+3. (2$\times$3 marks) Find all values of $h$ that make the following matrices consistent.\\
+a) $\begin{bmatrix}
+1&h&|&4\\
+3&6&|&8
+\end{bmatrix}$\\
+$R_2-3R_1 = \begin{bmatrix}
+1&h&|&4\\
+0&-3h+6&|&-4
+\end{bmatrix}$\\
+$\therefore$ the augmented matrix is consistent if $h \neq 2$, as that will make $R_2, 0=-4$ which is inconsistent.\\
+b) $\begin{bmatrix}
+-4&12&|&h\\
+2&-6&|&-3
+\end{bmatrix}$\\
+$R_2+\frac{1}{2}R_1 = \begin{bmatrix}
+-4&12&|&h\\
+0&0&|&h-3
+\end{bmatrix}$\\
+$\therefore$ the augmented matrix is consistent if and only if $h=3$, otherwise it's consistent.\\
+
+4. (4 marks) Circle either true or false for each statement.\\
+a) True\circled{False} In order for a matrix $B$ to be the inverse of $A$, only one of the equations $AB=I$ and $BA=I$ must be true.\\
+b)\circled{True} False If $A$ and $B$ are $n \times n$ and invertible then $B^{-1}A^{-1}$ is the inverse of $AB$.\\
+c) True\circled{False} If $A = \begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}$ and $ad-bc = 0$, then $A$ is invertible.\\
+d) True\circled{False} If $A$ is an invertible $2 \times 2$ matrix, then the equation $A \begin{bmatrix}
+x\\
+y
+\end{bmatrix} = \begin{bmatrix}
+b_1\\
+b_2
+\end{bmatrix}$ always has no solution for $\begin{bmatrix}
+x\\
+y
+\end{bmatrix}$.\\
+
+5. (6 marks) Find the inverse of each matrix or explain why it doesn't exist.\\
+a) $A = \begin{bmatrix}
+3&4\\
+-2&2
+\end{bmatrix}$\\
+If $A = \begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}$, then $3(2)-4(-2) = 14$\\
+$\implies \frac{1}{14}\begin{bmatrix}
+3&4\\
+-2&2
+\end{bmatrix} \therefore A^{-1} = \begin{bmatrix}
+\frac{3}{14}&\frac{2}{7}\\
+-\frac{1}{7}&\frac{1}{7}
+\end{bmatrix}$\\
+b) $B = \begin{bmatrix}
+1&2\\
+-1&-2
+\end{bmatrix}$\\
+If $B = \begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}$, then $1(-2)-2(-1) = 0$\\
+$\therefore B$ doesn't have an inverse $\because ad - bc = 0$\\ 
+c) $C = \begin{bmatrix}
+0&1&0\\
+1&0&3\\
+1&1&2
+\end{bmatrix}$\\
+$C^{-1} = \begin{bmatrix}
+0&1&0&|&1&0&0\\
+1&0&3&|&0&1&0\\
+1&1&2&|&0&0&1
+\end{bmatrix}$ $R_1 \leftrightarrow R_2 = \begin{bmatrix}
+1&0&3&|&0&1&0\\
+0&1&0&|&1&0&0\\
+1&1&2&|&0&0&1
+\end{bmatrix}$\\
+$R_1 \leftrightarrow R_3 = \begin{bmatrix}
+1&1&2&|&0&0&1\\
+0&1&0&|&1&0&0\\
+1&0&3&|&0&1&0
+\end{bmatrix}$ $R_3 - R_1 = \begin{bmatrix}
+1&1&2&|&0&0&1\\
+0&1&0&|&1&0&0\\
+0&-1&1&|&0&1&-1
+\end{bmatrix}$\\
+$R_3 + R_2 = \begin{bmatrix}
+1&1&2&|&0&0&1\\
+0&1&0&|&1&0&0\\
+0&0&1&|&1&1&-1
+\end{bmatrix}$ $R_1 - R_2 = \begin{bmatrix}
+1&0&2&|&-1&0&1\\
+0&1&0&|&1&0&0\\
+0&0&1&|&1&1&-1
+\end{bmatrix}$\\
+$R_1 - 2R_3 = \begin{bmatrix}
+1&0&0&|&-3&-1&2\\
+0&1&0&|&1&0&0\\
+0&0&1&|&1&1&-1
+\end{bmatrix}$ $\therefore C^{-1} = \begin{bmatrix}
+-3&-1&2\\
+1&0&0\\
+1&1&-1
+\end{bmatrix}$\\
+
+6. (5 marks) If $A = \begin{bmatrix}
+1&-1&3\\
+-2&0&-5\\
+-3&1&4
+\end{bmatrix}$ compute each of the following matrices or explain why it doesn't exist.\\
+a) $A^T + I_3$\\
+$\begin{bmatrix}
+1&-2&-3\\
+-1&0&1\\
+3&-5&4
+\end{bmatrix} + 3\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{bmatrix} = \begin{bmatrix}
+4&-2&-3\\
+-1&3&1\\
+3&-5&7
+\end{bmatrix}$\\
+b) $4I_3 - 2A$\\
+$4\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{bmatrix} - 2\begin{bmatrix}
+1&-1&3\\
+-2&0&-5\\
+-3&1&4
+\end{bmatrix} = \begin{bmatrix}
+4&0&0\\
+0&4&0\\
+0&0&4
+\end{bmatrix} - \begin{bmatrix}
+2&-2&6\\
+-4&0&-10\\
+-6&2&8
+\end{bmatrix} = \begin{bmatrix}
+2&2&-6\\
+4&4&10\\
+6&-2&-4
+\end{bmatrix}$\\
+c) $(5I_3)(2A)$\\
+$5\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&0
+\end{bmatrix} \cdot 2\begin{bmatrix}
+1&-1&3\\
+-2&0&-5\\
+-3&1&4
+\end{bmatrix} = \begin{bmatrix}
+5&0&0\\
+0&5&0\\
+0&0&5
+\end{bmatrix} \cdot \begin{bmatrix}
+2&-2&6\\
+-4&0&-10\\
+-6&2&8
+\end{bmatrix}$\\
+$=\begin{bmatrix}
+5(2)+0(-4)+0(-6)&5(-2)+0(0)+0(2)&5(6)+0(-10)+0(8)\\
+0(2)+5(-4)+0(-6)&0(-2)+5(0)+0(2)&0(6)+5(-10)+0(8)\\
+0(2)+0(-4)+5(-6)&0(-2)+0(0)+5(2)&0(6)+0(-10)+5(8)
+\end{bmatrix} = \begin{bmatrix}
+10&-10&30\\
+-20&0&-50\\
+-30&10&40
+\end{bmatrix}$\\
+
+7. (2 marks) Normalize the vector $\vec{v} = \begin{bmatrix}
+2&-2&3
+\end{bmatrix}$\\
+$||\vec{v}|| = \sqrt{2^2+(-2)^2+3^2} = \sqrt{17}$\\
+$\frac{\vec{v}}{||\vec{v}||} = \begin{bmatrix}
+\frac{2}{\sqrt{17}}&-\frac{2}{\sqrt{17}}&\frac{3}{\sqrt{17}}
+\end{bmatrix}$\\
+
+8. (4 marks) Find the distance between the vectors $\vec{v} = \begin{bmatrix}
+2&-4&4
+\end{bmatrix}, \vec{w} = \begin{bmatrix}
+1&-2&2
+\end{bmatrix}$\\
+$\vec{v}-\vec{w} = \begin{bmatrix}
+1&-2&2
+\end{bmatrix}$\\
+$||\vec{u}|| = \sqrt{1^2+(-2)^2+2^2} = \sqrt{9} = 3$
+
+9. (3 marks) Calculate the dot product of the following matrices $\vec{v} = \begin{bmatrix}
+2&-4&4
+\end{bmatrix}$, $\vec{w} = \begin{bmatrix}
+1&-2&2
+\end{bmatrix}$\\
+$\vec{v} \cdot \vec{w} = \begin{bmatrix}
+2(1)+(-4)(-2)+4(2)
+\end{bmatrix} = 18$\\
+
+10. (2$\times$3 marks) Determine if the cosine of the angle between the vectors is acute, obtuse or right angle.\\
+a) $\vec{v} = \begin{bmatrix}
+2&-4&4
+\end{bmatrix}$, $\vec{w} = \begin{bmatrix}
+1&-2&2
+\end{bmatrix}$\\
+$\cos \theta = \frac{\vec{v}\cdot\vec{w}}{||\vec{v} \cdot \vec{w}||}$\\
+$\implies \frac{\begin{bmatrix}
+2(1)+(-4)(-2)+4(2)
+\end{bmatrix}}{\sqrt{2^2+(-4)^2+4^2} \cdot \sqrt{1^2+(-2)^2+2^2}} = \frac{18}{\sqrt{36}\cdot\sqrt{9}} = \frac{18}{18} = 1$\\
+$\therefore$ there is no angle between the vectors since $\cos\theta = 1$\\
+b) $\vec{v} = \begin{bmatrix}
+3&-2&1
+\end{bmatrix}$, $\vec{w} = \begin{bmatrix}
+1&3&-2
+\end{bmatrix}$\\
+$\cos\theta = \frac{\begin{bmatrix}
+3(1)+(-2)(3)+1(-2)
+\end{bmatrix}}{\sqrt{3^2+(-2)^2+1^2}\cdot\sqrt{1^2+3^2+(-2)^2}} = \frac{-5}{\sqrt{14}\cdot\sqrt{14}} = -\frac{5}{14}$\\
+$\therefore$ the angle between vectors is obtuse since $-1 < \cos\theta < 0$\\
+
+11. (6 marks) Consider each set of vectors in $\mathbb{R}^3$. Show why each set is NOT a vector space. Hint: Find one example that shows that at least one of the vector space properties does not hold.\\
+a) $\{\begin{bmatrix}
+x&y&z
+\end{bmatrix} | y = 2k$, where $k$ can be any integer $\}$\\
+Let $c = \frac{1}{4}$ and $k = 1$ such that $c\vec{v} = \frac{1}{4}\begin{bmatrix}
+4\\
+2(1)\\
+4
+\end{bmatrix} = \begin{bmatrix}
+1\\
+.5\\
+1
+\end{bmatrix}$\\
+$\therefore$ not a vector space since $y = 2k$ where $k$ is any integer would still produce an integer. But scaling the vector by $\frac{1}{4}$ produced a $y$ that is not an integer.\\
+b) $\{\begin{bmatrix}
+x&y&z
+\end{bmatrix} | xyz = 0 \}$\\
+Where at least one of $x,y$ or $z$ is $0$, $\vec{v} = \begin{bmatrix}
+0\\
+y\\
+z
+\end{bmatrix}$\\
+Let $\vec{v} = \begin{bmatrix}
+0\\
+1\\
+2
+\end{bmatrix}$, $\vec{u} = \begin{bmatrix}
+1\\
+0\\
+3
+\end{bmatrix}$\\
+Then $\vec{v} + \vec{u} = \begin{bmatrix}
+0+1\\
+1+0\\
+2+3
+\end{bmatrix} = \begin{bmatrix}
+1\\
+1\\
+5
+\end{bmatrix}$\\
+$\therefore$ not a vector space since $\vec{v} + \vec{u} \notin V$ as $\vec{v} + \vec{u} \{xyz \neq 0 \}$\\
+
+12. (9 marks) Determine if each set of vectors is linearly dependent or linearly independent. Show your work. Remember: Each vector should be a column NOT a row.\\
+a) $\{\vec{v} = \begin{bmatrix}
+1&2&3
+\end{bmatrix}$, $\vec{w} = \begin{bmatrix}
+1&0&3
+\end{bmatrix}$, $\vec{u} = \begin{bmatrix}
+2&2&6
+\end{bmatrix}$, $\vec{t} = \begin{bmatrix}
+2&1&3
+\end{bmatrix}\}$\\
+4 vectors in $\mathbb{R}^3$ must have at least 1 free parameter $\therefore$ linearly dependent.\\
+b) $\{\vec{v} = \begin{bmatrix}
+2&1&3
+\end{bmatrix}$, $\vec{w} = \begin{bmatrix}
+1&0&0
+\end{bmatrix}$, $\vec{u} = \begin{bmatrix}
+-2&1&0
+\end{bmatrix}\}$\\
+$\begin{bmatrix}
+2&1&-1&|&0\\
+1&0&1&|&0\\
+3&0&0&|&0
+\end{bmatrix}$ $\frac{1}{3}R_3 \leftrightarrow R_1 = \begin{bmatrix}
+1&0&0&|&0\\
+1&0&1&|&0\\
+2&1&-1&|&0
+\end{bmatrix}$ $R_2 \leftrightarrow R_3 = \begin{bmatrix}
+1&0&0&|&0\\
+2&1&-1&|&0\\
+1&0&1&|&0
+\end{bmatrix}$\\
+$R_3 - R_1 = \begin{bmatrix}
+1&0&0&|&0\\
+2&1&-1&|&0\\
+0&0&1&|&0
+\end{bmatrix}$ $R_2 - 2R_1 = \begin{bmatrix}
+1&0&0&|&0\\
+0&1&-1&|&0\\
+0&0&1&|&0
+\end{bmatrix}$ $R_2 + R_3 = \begin{bmatrix}
+1&0&0&|&0\\
+0&1&0&|&0\\
+0&0&1&|&0
+\end{bmatrix}$\\
+$\therefore$ the set is linearly independent $\because$ there is no free parameters.\\
+c) $\{\vec{v} = \begin{bmatrix}
+1&2&3
+\end{bmatrix}$, $\vec{w} = \begin{bmatrix}
+1&0&1
+\end{bmatrix}\}$\\
+$\begin{bmatrix}
+1&1&|&0\\
+2&0&|&0\\
+3&1&|&0
+\end{bmatrix}$ $R_2 - 2R_1 = \begin{bmatrix}
+1&1&|&0\\
+0&-2&|&0\\
+3&1&|&0
+\end{bmatrix}$ $-\frac{1}{2}R_2 = \begin{bmatrix}
+1&1&|&0\\
+0&1&|&0\\
+3&1&|&0
+\end{bmatrix}$ $R_1 - R_2 = \begin{bmatrix}
+1&0&|&0\\
+0&1&|&0\\
+3&1&|&0
+\end{bmatrix}$\\
+$R_3 - 3R_1 = \begin{bmatrix}
+1&0&|&0\\
+0&1&|&0\\
+0&1&|&0
+\end{bmatrix}$ $R_3 - R_2 = \begin{bmatrix}
+1&0&|&0\\
+0&1&|&0\\
+0&0&|&0
+\end{bmatrix}$\\
+$\therefore$ the set is linearly independent $\because$ there is no free parameters.\\
+\end{document}
