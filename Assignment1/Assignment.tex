@@ -176,11 +176,11 @@ $R_3 + R_2 = \begin{bmatrix}
 0&0&1&|&1&1&-1
 \end{bmatrix}$\\
 $R_1 - 2R_3 = \begin{bmatrix}
-1&0&0&|&-3&-1&2\\
+1&0&0&|&-3&-2&3\\
 0&1&0&|&1&0&0\\
 0&0&1&|&1&1&-1
 \end{bmatrix}$ $\therefore C^{-1} = \begin{bmatrix}
--3&-1&2\\
+-3&-2&3\\
 1&0&0\\
 1&1&-1
 \end{bmatrix}$\\
@@ -315,7 +315,7 @@ Let $c = \frac{1}{4}$ and $k = 1$ such that $c\vec{v} = \frac{1}{4}\begin{bmatri
 .5\\
 1
 \end{bmatrix}$\\
-$\therefore$ not a vector space since $y = 2k$ where $k$ is any integer would still produce an integer. But scaling the vector by $\frac{1}{4}$ produced a $y$ that is not an integer.\\
+$\therefore$ not a vector space since $c\vec{v} \notin V$. If $y = 2k$ where $k$ is any integer, then $y \in \mathbb{Z}$. But if $c \in \mathbb{R}$ such that $c = \frac{1}{4}$, and if $k = 1$ such that $y = 2(1) = 2$, then $cy \notin \mathbb{Z}$.\\
 b) $\{\begin{bmatrix}
 x&y&z
 \end{bmatrix} | xyz = 0 \}$\\
@@ -362,11 +362,11 @@ b) $\{\vec{v} = \begin{bmatrix}
 \end{bmatrix}$, $\vec{u} = \begin{bmatrix}
 -2&1&0
 \end{bmatrix}\}$\\
-$\begin{bmatrix}
+$$\begin{bmatrix}
 2&1&-1&|&0\\
 1&0&1&|&0\\
 3&0&0&|&0
-\end{bmatrix}$ $\frac{1}{3}R_3 \leftrightarrow R_1 = \begin{bmatrix}
+\end{bmatrix}$$\\$\frac{1}{3}R_3 \leftrightarrow R_1 = \begin{bmatrix}
 1&0&0&|&0\\
 1&0&1&|&0\\
 2&1&-1&|&0
@@ -394,11 +394,12 @@ c) $\{\vec{v} = \begin{bmatrix}
 \end{bmatrix}$, $\vec{w} = \begin{bmatrix}
 1&0&1
 \end{bmatrix}\}$\\
-$\begin{bmatrix}
+$$\begin{bmatrix}
 1&1&|&0\\
 2&0&|&0\\
 3&1&|&0
-\end{bmatrix}$ $R_2 - 2R_1 = \begin{bmatrix}
+\end{bmatrix}$$\\
+$R_2 - 2R_1 = \begin{bmatrix}
 1&1&|&0\\
 0&-2&|&0\\
 3&1&|&0
